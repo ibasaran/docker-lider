@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+cd $DEVENV
+
+echo $DEVENV
+
+if [ -d $DEVENV/lider ]; then
+	git pull
+else
+	git config --global http.sslVerify false
+	git clone git@github.com:Pardus-Kurumsal/lider.git
+fi
+
